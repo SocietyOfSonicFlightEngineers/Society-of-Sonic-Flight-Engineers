@@ -137,7 +137,7 @@
 /*Navigation Buttons Stuff*/
 
     .navlink {
-        display: inline-block;
+        display: block;
         color: #EBEBEB;
         font-size: 20px;
         font-weight: 500;
@@ -145,16 +145,18 @@
         padding: 10px;
         border:2px solid rgb(238, 123, 69);
         transition: all 0.15s;
-        margin-inline: -2.5px;
-        margin-block: -1px;
         text-decoration: none;
+        z-index: 2;
+        align-items: center;
     }
 
     .navlink:hover {
+        z-index: 4;
         background: rgb(238, 123, 69);
         color: #051e28;
         transition: all 0.15s;
         transform: scale(1.1);
+        .drpdwnc {transition: all 0.15s; display: block; opacity: 100%}
 
     }
 
@@ -223,12 +225,18 @@
 }
 
 .navmenu {
-    border: none;
+    display: flex;
     padding-block: 25px;
     margin-right: auto;
     background-color: none;
     box-shadow: none;
     z-index: 1;
+}
+
+.navmenu > * {
+  position: relative;
+  margin-left: -1px; /* border overlap */
+  display: flex;
 }
 
 .bodydiv {
@@ -242,8 +250,8 @@
 
 .drpdwn {
     position: relative;
-    display: inline-block;
-    z-index: 1;
+    display: flex-block;
+    z-index: 3;
 }
 
 nav ul {}
@@ -253,7 +261,7 @@ nav ul {}
 }
 
 .drpdwnc {
-    display: none;
+    display: block;
     position: absolute;
     z-index: 1;
     opacity: 0%;
