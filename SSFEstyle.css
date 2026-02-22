@@ -1,14 +1,30 @@
  /* built in elements*/
     body {
-        background-color: #EBEBEB;
+        background-color: #051e28;
         text-align: center;
-        font-family: sans-serif;
+        font-family: Futura;
         margin: auto;
     }
 
+    footer {
+        margin-top: 4vw;
+        border-top: 0.2vw solid rgb(238, 123, 69);
+        padding-inline: 2vw;
+        padding-block: 0.5vw;
+        background-color: #051e29;
+    }
+
+    header {
+        border-bottom: 0.2vw solid rgb(238, 123, 69);
+        padding-inline: 2vw;
+        padding-block: 0.5vw;
+        background-color: #051e29;
+    }
+
     h1 {
-        font-size: 3vw;
-        color: rgba(0, 0, 0, 1);
+        font-size: 25px;
+        color: rgba(235, 235, 235, 1);
+        font-weight: 1000;
         background-color: none;
         padding: 1vw;
         box-shadow: none;
@@ -17,8 +33,8 @@
     }
 
     p {
-        font-size: 1.5vw;
-        color: rgba(0, 0, 0, 1);
+        font-size: 20px;
+        color: rgba(235, 235, 235, 1);
         text-shadow: none;
         vertical-align: middle;
         margin-inline: 2vw;
@@ -37,25 +53,25 @@
     a {
         color: rgb(0, 0, 0);
         font-size: 30px;
-        box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
         margin: 0%;
     }
 
     hr {
         height:0.125vw;
         background-color:rgb(225, 225, 225);
-        border:0.25vw solid rgb(0, 0, 0);
+        border:2px solid rgb(0, 0, 0);
         margin:auto;
         margin-block: 0;
-        border-radius: 0.5vw;
+        border-radius: 2px;
         width: 75%;
         justify-content: center;
     }
 
     h2 {
-        color: rgba(0, 0, 0, 1);
-        font-size: 2vw;
-        font-weight: bold;
+        font-size: 22px;
+        color: rgba(235, 235, 235, 1);
+        font-weight: 600;
         border: none;
 
         background-color: none;
@@ -65,8 +81,8 @@
     }
 
     h3 {
-        color: rgba(0, 0, 0, 1);
-        font-size: 1.5vw;
+        font-size: 20px;
+        color: rgba(235, 235, 235, 1);
         transition: all 0.2s;
         border: 1px solid black;
         background-color: rgba(155, 185, 255, 0.4);
@@ -99,11 +115,10 @@
 
 .headerimg {
     display: block;
-    margin: auto;
+    margin-left: auto;
     box-shadow: none;
-    width: 50%;
-    margin-block: 0vw;
-    filter: drop-shadow(0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4));
+    min-width: 250px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
     vertical-align: middle;
 }
 
@@ -115,39 +130,61 @@
     box-shadow: none;
     width: 7.5%;
     margin-block: 1vw;
-    box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     vertical-align: middle;
 }
 
-.navlink {
-    display: inline-block;
-    color: #EBEBEB;
-    font-size: 1.5vw;
-    background-color: rgba(0, 0, 0, 1);
-    padding: 0.75vw;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
-    border:0.2vw solid rgb(0, 0, 0);
-    transition: all 0.2s;
-    margin-inline: 0.35vw;
-    margin-block: 0.25vw;
-    border-radius: 0.5vw;
-}
+/*Navigation Buttons Stuff*/
 
-.navlink:hover {
-    background: rgb(235, 235, 235);
-    color: rgb(0, 0, 0);
-    transition: all 0.2s;
-    transform: scale(1.1);
+    .navlink {
+        display: inline-block;
+        color: #EBEBEB;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #051e28;
+        padding: 10px;
+        border:2px solid rgb(238, 123, 69);
+        transition: all 0.15s;
+        margin-inline: -2.5px;
+        margin-block: -1px;
+        text-decoration: none;
+    }
 
-}
+    .navlink:hover {
+        background: rgb(238, 123, 69);
+        color: #051e28;
+        transition: all 0.15s;
+        transform: scale(1.1);
 
-.navlinkimg {
-    display: inline-block;
-    height: 1.5vw;
-    vertical-align: middle;
-}
+    }
+
+    .navlinkimg {
+        display: inline-block;
+        height: 25px;
+        vertical-align: middle;
+    }
+
+    .drpnavlink {
+        display: inline-block;
+        color: #EBEBEB;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #051e28;
+        padding: 10px;
+        border:2px solid rgb(238, 123, 69);
+        transition: all 0.15s;
+        margin-inline: -2.5px;
+        margin-block: -1px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .drpnavlink:hover {
+        background: rgb(238, 123, 69);
+        color: #051e28;
+        transition: all 0.15s;
+        transform: scale(1.1);
+    }
 
 .pcontainer {
     padding-inline: none;
@@ -172,41 +209,35 @@
     align-items: center;
 }
 
-.headernav {
-    border: 0.2vw solid rgb(0, 0, 0);
-    padding: 0vw;
-    background-color: #145494;
-    box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
-    border-bottom-left-radius: 0vw;
-    border-bottom-right-radius: 0vw;
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #345A66), url(IMG_3074.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 10px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    background-color: #345A66;
+    position: sticky;
+    top: -0px;
 }
 
 .navmenu {
     border: none;
-    padding-block: 2vw;
-    padding-right: 1vw;
+    padding-block: 25px;
+    margin-right: auto;
     background-color: none;
     box-shadow: none;
     z-index: 1;
 }
 
 .bodydiv {
-    background-color: #EBEBEB;
+    background-color: #051e28;
     text-align: center;
-    font-family: sans-serif;
+    font-family: Futura;
+    font-weight: 500;
     margin: auto;
     width: 85vw;
-}
-
-.footernav {
-    margin-top: 4vw;
-    border: 0.2vw solid rgb(0, 0, 0);
-    padding-inline: 2vw;
-    padding-block: 0.5vw;
-    background-color: #145494;
-    box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
-    border-top-left-radius: 0vw;
-    border-top-right-radius: 0vw;
 }
 
 .drpdwn {
@@ -215,12 +246,18 @@
     z-index: 1;
 }
 
+nav ul {}
+
+.tricolorcolumns {
+    color: black;
+}
+
 .drpdwnc {
     display: none;
     position: absolute;
     z-index: 1;
     opacity: 0%;
-    transition: all 0.2s;
+    transition: all 0.15s;
 }
 
 .drpdwnfaq {
@@ -229,57 +266,33 @@
     width: 60%;
     margin: auto;
     z-index: 1;
-    transition: all 0.2s;
+    transition: all 0.15s;
 }
 
 .drpdwnt {
     opacity: 0%;
     display: block;
     z-index: 1;
-    transition: all 0.2s;
+    transition: all 0.15s;
     max-height: 0vw;
 }
 
-.drpdwn:hover .drpdwnc {transition: all 0.2s; display: block; opacity: 100%}
+.drpdwn:hover .drpdwnc {transition: all 0.15s; display: block; opacity: 100%}
 
 .drpdwnfaq.open .drpdwnt {
   opacity: 1;
   display: inline;
-  transition: all 0.2s;
+  transition: all 0.15s;
 }
 
 .drpdwnfaq.open h3 {
-  transition: all 0.2s;
+  transition: all 0.15s;
   background-color: rgba(155, 185, 255, 1.0);
   margin-bottom: 1vw;
 }
 
-.drpnavlink {
-    display: inline-block;
-    color: #EBEBEB;
-    font-size: 1.5vw;
-    background-color: rgba(0, 0, 0, 1);
-    padding: 0.75vw;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
-    border:0.2vw solid rgb(0, 0, 0);
-    transition: all 0.2s;
-    margin-inline: 0.4vw;
-    margin-block: 0.25vw;
-    border-radius: 0.5vw;
-    transition: all 0.2s;
-}
-
-.drpnavlink:hover {
-    background: rgb(235, 235, 235);
-    color: rgb(0, 0, 0);
-    transition: all 0.2s;
-    transform: scale(1.1);
-}
-
 .transitioning {
-    animation: fadein 0.75s forwards;
+    animation: fadein 0.5s forwards;
 }
 
 .timeline {
@@ -328,12 +341,21 @@
     color: black;
 }
 
+.headercontainers {
+    display: inline-flex;
+}
+
 @keyframes fadein {
     from{
-        transform: translateY(20vh); opacity: 30%;
+        transform: translateY(200px); opacity: 15%;
     }
 
     to{
         transform: translateY(0vh); opacity: 100%;
     }
 }
+
+@font-face {font-family: 'Futura';
+            src: url('fonts/Futura/Futura Condensed/Futura Condensed.ttf') format('truetype');
+            font-weight: normal;
+            font-style: condensed;}
