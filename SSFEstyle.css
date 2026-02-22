@@ -135,7 +135,11 @@
 }
 
 /*Navigation Buttons Stuff*/
-
+    @media (max-width: 900px) {
+        .navmenu {
+            flex-wrap: wrap;
+        }
+    }
     .navlink {
         display: block;
         color: #EBEBEB;
@@ -148,6 +152,7 @@
         text-decoration: none;
         z-index: 2;
         align-items: center;
+        white-space: nowrap;
     }
 
     .navlink:hover {
@@ -226,6 +231,8 @@
 
 .navmenu {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-block: 25px;
     margin-right: auto;
     background-color: none;
@@ -235,7 +242,6 @@
 
 .navmenu > * {
   position: relative;
-  margin-left: -1px; /* border overlap */
   display: flex;
 }
 
@@ -367,3 +373,35 @@ nav ul {}
             src: url('fonts/Futura/Futura Condensed/Futura Condensed.ttf') format('truetype');
             font-weight: normal;
             font-style: condensed;}
+
+/* Hamburger toggle thing */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #EBEBEB;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Supposed to mobile condense lol */
+@media (max-width: 675px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .navmenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navmenu.active {
+        display: flex;
+    }
+
+    .navlink {
+        width: 100%;
+        text-align: center;
+    }
+}
