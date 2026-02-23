@@ -1,15 +1,19 @@
+ @font-face {font-family: 'Futura';
+            src: url('fonts/Futura Condensed.ttf') format('truetype');
+            font-weight: normal;
+            font-style: condensed;}
+
  /* built in elements*/
     body {
         background-color: #051e28;
         text-align: center;
-        font-family: Futura;
+        font-family: "Open Sans", sans-serif;
         margin: auto;
     }
 
     footer {
         margin-top: 4vw;
         border-top: 0.2vw solid rgb(238, 123, 69);
-        padding-inline: 2vw;
         padding-block: 0.5vw;
         background-color: #051e29;
     }
@@ -19,6 +23,7 @@
         padding-inline: 2vw;
         padding-block: 0.5vw;
         background-color: #051e29;
+        align-items: center
     }
 
     h1 {
@@ -37,7 +42,6 @@
         color: rgba(235, 235, 235, 1);
         text-shadow: none;
         vertical-align: middle;
-        margin-inline: 2vw;
     }
 
     iframe {
@@ -93,6 +97,9 @@
         user-select: none;
         margin-bottom: 0vw;
     }
+
+    h1, h2, h3, h4, a { font-family: "Futura", sans-serif; }
+
 
 .tricolorcolumns {
     background-color: rgb(205,205,205);
@@ -248,7 +255,6 @@
 .bodydiv {
     background-color: #051e28;
     text-align: center;
-    font-family: Futura;
     font-weight: 500;
     margin: auto;
     width: 85vw;
@@ -369,11 +375,6 @@ nav ul {}
     }
 }
 
-@font-face {font-family: 'Futura';
-            src: url('fonts/Futura/Futura Condensed/Futura Condensed.ttf') format('truetype');
-            font-weight: normal;
-            font-style: condensed;}
-
 /* Hamburger toggle thing */
 .hamburger {
     display: none;
@@ -381,19 +382,25 @@ nav ul {}
     color: #EBEBEB;
     cursor: pointer;
     padding: 10px;
+    font-size: 28px;
+    line-height: 1;
 }
 
 /* Supposed to mobile condense lol */
 @media (max-width: 675px) {
 
+    #headerdiv { flex-wrap: wrap;}
+
     .hamburger {
         display: block;
+        order: 1; margin-left: auto;
     }
 
     .navmenu {
         display: none;
         flex-direction: column;
         width: 100%;
+        order: 2;
     }
 
     .navmenu.active {
@@ -401,7 +408,11 @@ nav ul {}
     }
 
     .navlink {
-        width: 100%;
         text-align: center;
     }
+
+    .columnsformat:not(#headerdiv) { flex-direction: column; align-items: flex-start; }
+
+
+    .headerimg { order: 0; }
 }
