@@ -15,10 +15,19 @@
         margin-top: 4vw;
         border-top: 0.2vw solid rgb(238, 123, 69);
         padding-block: 0.5vw;
+        width: 100%;
+        justify-content: center;
         background-color: #051e29;
+    }
+    #sizing{
+        width: 90%;
     }
 
     header {
+        position: -webkit-sticky; /* For Safari support */
+        position: sticky;
+        top: 0;           /* This tells it to stop once it hits the very top */
+        z-index: 9999;
         border-bottom: 0.2vw solid rgb(238, 123, 69);
         padding-inline: 2vw;
         padding-block: 0.5vw;
@@ -126,7 +135,7 @@
     box-shadow: none;
     min-width: 250px;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
-    vertical-align: middle;
+    /*vertical-align: middle;*/
 }
 
 .footerlogo {
@@ -141,11 +150,73 @@
     vertical-align: middle;
 }
 
+#aboutgroupphoto{
+    max-width: 50%; 
+    border-radius: 25px; 
+    border: 0.2vw solid rgb(0, 0, 0);
+}
+
+.navlink {
+        display: block;
+        color: #EBEBEB;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #051e28;
+        padding: 10px;
+        border:2px solid rgb(238, 123, 69);
+        transition: all 0.15s;
+        text-decoration: none;
+        z-index: 2;
+        align-items: center;
+        white-space: nowrap;
+    }
+.navlink2 {
+    display: block;
+    width: 90%;              /* Stays inside the card with a small margin */
+    margin: 15px auto;       /* Centers it and adds vertical space */
+    padding: 12px 0;         /* Vertical padding only, let width handle the rest */
+    box-sizing: border-box;  /* Essential to prevent the "way less than 90%" bug */
+    
+    color: #EBEBEB;
+    background-color: #051e28;
+    border: 2px solid rgb(238, 123, 69);
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.15s ease-in-out;
+}
+
+.navlink2:hover {
+    background-color: rgb(238, 123, 69);
+    color: #051e28;
+    transition: all 0.15s;
+    transform: scale(1.1);
+}
+
+
 /*Navigation Buttons Stuff*/
     @media (max-width: 900px) {
         .navmenu {
             flex-wrap: wrap;
         }
+        #aboutgroupphoto{
+            max-width: 80%;
+        }
+    }
+    .dropdown{
+        position: relative;
+        display: inline block;
+        color: #EBEBEB;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #051e28;
+        padding: 10px;
+        transition: all 0.15s;
+        text-decoration: none;
+        z-index: 2;
+        align-items: center;
+        white-space: nowrap;
     }
     .navlink {
         display: block;
@@ -168,7 +239,6 @@
         color: #051e28;
         transition: all 0.15s;
         transform: scale(1.1);
-        .drpdwnc {transition: all 0.15s; display: block; opacity: 100%}
 
     }
 
@@ -197,9 +267,8 @@
         background: rgb(238, 123, 69);
         color: #051e28;
         transition: all 0.15s;
-        transform: scale(1.1);
     }
-
+    
 .pcontainer {
     padding-inline: none;
     padding-block: none
@@ -212,7 +281,7 @@
 .columnsformat {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -221,19 +290,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-.header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), #345A66), url(IMG_3074.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top 10px;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-    background-color: #345A66;
-    position: sticky;
-    top: -0px;
 }
 
 .navmenu {
@@ -257,7 +313,7 @@
     text-align: center;
     font-weight: 500;
     margin: auto;
-    width: 85vw;
+    width: 80%;
 }
 
 .drpdwn {
@@ -266,18 +322,19 @@
     z-index: 3;
 }
 
-nav ul {}
+
 
 .tricolorcolumns {
     color: black;
 }
 
 .drpdwnc {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 1;
     opacity: 0%;
     transition: all 0.15s;
+    top: 100%;
 }
 
 .drpdwnfaq {
@@ -330,12 +387,599 @@ nav ul {}
 }
 
 .timeline ul li{
-    background-color: lightgray;
+    background-color: rgb(238, 123, 69);
     border-radius: 2vw;
     margin-bottom: 2vw;
     padding-bottom: 1.5vw;
     width: 52%;
     box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
+}
+
+#projecttext{
+    color: black;
+}
+
+.timeline ul li:nth-child(odd){
+    float: left;
+}
+
+.timeline ul li:nth-child(even) {
+    float: right;
+}
+
+.timeline ul li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content p{
+    margin-block: 0;
+}
+
+.timeline-date {
+}
+.timeline-middle {
+    position: relative;
+    color: black;
+}
+
+.headercontainers {
+    display: inline-flex;
+}
+
+@keyframes fadein {
+    from{
+        transform: translateY(200px); opacity: 15%;
+    }
+
+    to{
+        transform: translateY(0vh); opacity: 100%;
+    }
+}
+
+/*navbar shenanigans*/
+#navbarlogo{
+    display: flex;
+    width: 300px;
+    pointer-events: none;
+    margin-bottom: -20px;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    box-shadow: none;
+    border: none;
+    margin-left: -15px;
+}
+#right{
+    float: right;
+}
+.topnav {
+  position: sticky;
+  position: relative; 
+  width: 100%;
+  top: 0;
+  width:100%;
+  background-color: #051e28;
+  z-index: 10;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.topnav a {
+  font-size: 20px;
+  color: white;
+  background-color: #051e28;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.topnav a:first-child {
+    box-shadow: none;
+}
+
+/* 3. Remove the orange border from the dropdown container in the navbar */
+.topnav .dropdown {
+    border: none; /* This removes the orange box around 'Projects' */
+}
+
+.topnav .dropbtn {
+    font-family: "Futura", sans-serif;
+    font-weight: 600;
+    text-transform: none; /* Keeps it from forcing all caps if inheriting from elsewhere */
+}
+
+/* Styles the "Design 1" and "Design 2" links inside the dropdown */
+.dropdown-content a {
+    font-family: "Futura", sans-serif;
+    font-weight: 500;
+    font-size: 16px; /* Adjust size specifically for the sub-menu */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button styles */
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px;
+  padding-left: 30px;
+  font-family: "Futura", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Dropdown content - hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #051e28;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%; /* Position the dropdown below the button */
+}
+
+/* Show the dropdown when hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: rgb(238, 123, 69);
+}
+
+/* Navbar link hover effect */
+.topnav a:hover {
+  color: rgb(238, 123, 69); /* Ensures navbar text turns white on hover */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Hover effect for links in dropdown */
+.dropdown-content a:hover {
+  color: rgb(238, 123, 69);
+}
+
+/* Mobile View Styles */
+@media screen and (max-width: 1024px) {
+  /* Hide all navigation links except the hamburger icon */
+  .topnav a:not(:first-child), .topnav #right {
+    display: none;
+  }
+  /* Display the hamburger icon */
+  .topnav a.icon {
+    float: right;
+    display: block;
+    position: absolute;
+    right: 10px; /* Keeps the icon on the right */
+    top: 0px; /* Keeps the icon centered vertically */
+  }
+  /* Show menu when hamburger is clicked */
+  .topnav.responsive {
+    position: sticky;
+  }
+  .topnav.responsive #navbarlogo {
+    width: 100px !important; /* Shinks the logo to half size */
+    margin-top: 5px;
+    transition: width 0.3s ease; /* Makes the shrinking look smooth */
+    margin-top: -10px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive #right {
+    display: block;
+  }
+  /* Dropdown in mobile */
+  .topnav.responsive .dropdown {
+    float: none;
+    background-color: #051e28;
+    width: 100%;
+  }
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+  /* Show dropdown in mobile */
+  .topnav.responsive .dropdown:hover .dropdown-content {
+    display: block;
+    color: rgb(238, 123, 69);
+  }
+   @font-face {font-family: 'Futura';
+            src: url('fonts/Futura Condensed.ttf') format('truetype');
+            font-weight: normal;
+            font-style: condensed;}
+
+ /* built in elements*/
+    body {
+        background-color: #051e28;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        margin: auto;
+    }
+
+    footer {
+        margin-top: 4vw;
+        border-top: 0.2vw solid rgb(238, 123, 69);
+        padding-block: 0.5vw;
+        width: 100%;
+        justify-content: center;
+        background-color: #051e29;
+    }
+    #sizing{
+        width: 90%;
+    }
+
+    header {
+        position: -webkit-sticky; /* For Safari support */
+        position: sticky;
+        top: 0;           /* This tells it to stop once it hits the very top */
+        z-index: 9999;
+        border-bottom: 0.2vw solid rgb(238, 123, 69);
+        padding-inline: 2vw;
+        padding-block: 0.5vw;
+        background-color: #051e29;
+        align-items: center
+    }
+
+    h1 {
+        font-size: 25px;
+        color: rgba(235, 235, 235, 1);
+        font-weight: 1000;
+        background-color: none;
+        padding: 1vw;
+        box-shadow: none;
+        text-shadow: none;
+        margin-bottom: 0vw;
+    }
+
+    p {
+        font-size: 20px;
+        color: rgba(235, 235, 235, 1);
+        text-shadow: none;
+        vertical-align: middle;
+    }
+
+    iframe {
+        display: block;
+        margin: auto;
+        border: 0.2vw solid rgb(0, 0, 0);
+        box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100vh;
+        border-radius: 1.5vw;
+    }
+
+    a {
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+        margin: 0%;
+    }
+
+    hr {
+        height:0.125vw;
+        background-color:rgb(225, 225, 225);
+        border:2px solid rgb(0, 0, 0);
+        margin:auto;
+        margin-block: 0;
+        border-radius: 2px;
+        width: 75%;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 22px;
+        color: rgba(235, 235, 235, 1);
+        font-weight: 600;
+        border: none;
+
+        background-color: none;
+        padding: 1.5vw;
+        width: 70%;
+        margin: auto;
+    }
+
+    h3 {
+        font-size: 20px;
+        color: rgba(235, 235, 235, 1);
+        transition: all 0.2s;
+        border: 1px solid black;
+        background-color: rgba(155, 185, 255, 0.4);
+        box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
+        border-radius: 0.5vw;
+        padding: 0.75vw;
+        cursor: pointer;
+        user-select: none;
+        margin-bottom: 0vw;
+    }
+
+    h1, h2, h3, h4, a { font-family: "Futura", sans-serif; }
+}
+
+.tricolorcolumns {
+    background-color: rgb(205,205,205);
+    padding: 1.5vw;
+    margin-inline: 1vw;
+    border-radius: 0.5vw;
+}
+
+.bodyimg {
+    display: block;
+    margin: auto;
+    box-shadow: none;
+    background-color: rgba(215, 215, 215, 1);
+    width: 50%;
+    border: 0.2vw solid rgb(0, 0, 0);
+    margin-inline: 3vw;
+    border-radius: 1.5vw;
+    vertical-align: middle;
+}
+
+.headerimg {
+    display: block;
+    margin-left: auto;
+    box-shadow: none;
+    min-width: 250px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
+    /*vertical-align: middle;*/
+}
+
+.footerlogo {
+    background-color: #EBEBEB;
+    border: 0.1vw solid #EBEBEB;
+    display: block;
+    margin: auto;
+    box-shadow: none;
+    width: 90px;
+    margin-block: 1vw;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    vertical-align: middle;
+}
+
+#aboutgroupphoto{
+    max-width: 50%; 
+    border-radius: 25px; 
+    border: 0.2vw solid rgb(0, 0, 0);
+}
+
+/*Navigation Buttons Stuff*/
+    @media (max-width: 900px) {
+        .navmenu {
+            flex-wrap: wrap;
+        }
+        #aboutgroupphoto{
+            max-width: 80%;
+        }
+    }
+    .dropdown{
+        position: relative;
+        display: inline block;
+        color: #EBEBEB;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #051e28;
+        padding: 10px;
+        transition: all 0.15s;
+        text-decoration: none;
+        z-index: 2;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .navlink {
+        display: inline-block;
+        max-width: 90%;
+        color: #EBEBEB;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #051e28;
+        padding: 10px;
+        border:2px solid rgb(238, 123, 69);
+        transition: all 0.15s;
+        text-decoration: none;
+        z-index: 2;
+        align-items: center;
+        white-space: nowrap;
+        border-radius: 8px;
+    }
+
+    .navlink:hover {
+        z-index: 4;
+        background: rgb(238, 123, 69);
+        color: #051e28;
+        transition: all 0.15s;
+        transform: scale(1.1);
+
+    }
+
+    .navlinkimg {
+        display: inline-block;
+        height: 25px;
+        vertical-align: middle;
+    }
+
+    .drpnavlink {
+        display: inline-block;
+        color: #EBEBEB;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #051e28;
+        padding: 10px;
+        border:2px solid rgb(238, 123, 69);
+        transition: all 0.15s;
+        margin-inline: -2.5px;
+        margin-block: -1px;
+        text-decoration: none;
+        transition: all 0.15s;
+    }
+
+    .drpnavlink:hover {
+        background: rgb(238, 123, 69);
+        color: #051e28;
+        transition: all 0.15s;
+    }
+    
+.pcontainer {
+    padding-inline: none;
+    padding-block: none
+    background-color: none;
+    box-shadow: none;
+    margin-bottom: 0vw;
+    justify-content: center;
+}
+
+.columnsformat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rowsformat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #345A66), url(IMG_3074.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 10px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    background-color: #345A66;
+    position: sticky;
+    top: -0px;
+}*/
+
+.navmenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-block: 25px;
+    margin-right: auto;
+    background-color: none;
+    box-shadow: none;
+    z-index: 1;
+}
+
+.navmenu > * {
+  position: relative;
+  display: flex;
+}
+
+.bodydiv {
+    background-color: #051e28;
+    text-align: center;
+    font-weight: 500;
+    margin: auto;
+    width: 80%;
+}
+
+.drpdwn {
+    position: relative;
+    display: flex-block;
+    z-index: 3;
+}
+
+
+
+.tricolorcolumns {
+    color: black;
+}
+
+.drpdwnc {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    opacity: 0%;
+    transition: all 0.15s;
+    top: 100%;
+}
+
+.drpdwnfaq {
+    position: relative;
+    display: block;
+    width: 60%;
+    margin: auto;
+    z-index: 1;
+    transition: all 0.15s;
+}
+
+.drpdwnt {
+    opacity: 0%;
+    display: block;
+    z-index: 1;
+    transition: all 0.15s;
+    max-height: 0vw;
+}
+
+.drpdwn:hover .drpdwnc {transition: all 0.15s; display: block; opacity: 100%}
+
+.drpdwnfaq.open .drpdwnt {
+  opacity: 1;
+  display: inline;
+  transition: all 0.15s;
+}
+
+.drpdwnfaq.open h3 {
+  transition: all 0.15s;
+  background-color: rgba(155, 185, 255, 1.0);
+  margin-bottom: 1vw;
+}
+
+.transitioning {
+    animation: fadein 0.5s forwards;
+}
+
+.timeline {
+    width:80%;
+    max-width: 800px;
+    height:auto;
+    margin: 0 auto;
+    display: grid;
+}
+
+.timeline ul{
+    padding: 0;
+    list-style:none;
+    margin-bottom: 0;
+}
+
+.timeline ul li{
+    background-color: rgb(238, 123, 69);
+    border-radius: 2vw;
+    margin-bottom: 2vw;
+    padding-bottom: 1.5vw;
+    width: 52%;
+    box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
+}
+
+#projecttext{
+    color: black;
 }
 
 .timeline ul li:nth-child(odd){
@@ -387,7 +1031,7 @@ nav ul {}
 }
 
 /* Supposed to mobile condense lol */
-@media (max-width: 675px) {
+@media (max-width: 1050px) {
 
     #headerdiv { flex-wrap: wrap;}
 
@@ -416,3 +1060,183 @@ nav ul {}
 
     .headerimg { order: 0; }
 }
+
+/*navbar shenanigans*/
+#navbarlogo{
+    display: flex;
+    width: 300px;
+    pointer-events: none;
+    margin-bottom: -20px;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    box-shadow: none;
+    border: none;
+    margin-left: -15px;
+}
+#right{
+    float: right;
+}
+.topnav {
+  position: sticky;
+  position: relative; 
+  width: 100%;
+  top: 0;
+  width:100%;
+  background-color: #051e28;
+  z-index: 10;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.topnav a {
+  font-size: 20px;
+  color: white;
+  background-color: #051e28;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.topnav a:first-child {
+    box-shadow: none;
+}
+
+/* 3. Remove the orange border from the dropdown container in the navbar */
+.topnav .dropdown {
+    border: none; /* This removes the orange box around 'Projects' */
+}
+
+.topnav .dropbtn {
+    font-family: "Futura", sans-serif;
+    font-weight: 600;
+    text-transform: none; /* Keeps it from forcing all caps if inheriting from elsewhere */
+}
+
+/* Styles the "Design 1" and "Design 2" links inside the dropdown */
+.dropdown-content a {
+    font-family: "Futura", sans-serif;
+    font-weight: 500;
+    font-size: 16px; /* Adjust size specifically for the sub-menu */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button styles */
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px;
+  padding-left: 30px;
+  font-family: "Futura", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Dropdown content - hidden by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #051e28;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%; /* Position the dropdown below the button */
+}
+
+/* Show the dropdown when hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: rgb(238, 123, 69);
+}
+
+/* Navbar link hover effect */
+.topnav a:hover {
+  color: rgb(238, 123, 69); /* Ensures navbar text turns white on hover */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Hover effect for links in dropdown */
+.dropdown-content a:hover {
+  color: rgb(238, 123, 69);
+}
+
+/* Mobile View Styles */
+/* --- CLEANED MOBILE VIEW (MAX 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .topnav a:not(:first-child), 
+    .topnav #right {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block !important; /* Forces the icon to show on mobile */
+        position: absolute;
+        right: 10px;
+        top: 0px;
+    }
+
+    .topnav.responsive #navbarlogo {
+        width: 100px !important;
+        margin-top: -10px;
+        transition: width 0.3s ease;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+        float: none;
+        background-color: #051e28;
+        width: 100%;
+    }
+
+    .columnsformat {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        gap: 15px;
+    }
+
+    .navlink {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 200px;
+        margin: 0 auto !important;
+    }
+}
+
+/* --- DESKTOP SAFETY NET (MIN 1025px) --- */
+/* This ensures the icon is 100% hidden on screens wider than mobile */
+@media screen and (min-width: 1025px) {
+    .topnav a.icon, 
+    .icon {
+        display: none !important;
+    }
+}
+/* End of Navbar */

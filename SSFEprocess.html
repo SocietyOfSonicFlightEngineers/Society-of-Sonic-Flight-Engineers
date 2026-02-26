@@ -3,8 +3,8 @@
 	<head>
 		<link rel="stylesheet" href="SSFEstyle.css">
 		<script src="script.js"></script>
-		<title>Society of Sonic Flight Engineers</title>
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<title>SSFE - Process</title>
+		<link rel="shortcut icon" type="image/png" href="ssfecircle.png">
 		<meta charset="UTF-8">
 		<meta property="og:title" content="Society of Sonic Flight Engineers">
       	<meta property="og:description" content="">
@@ -13,32 +13,30 @@
 	</head>
 
 	<body>
+		<h1 style="background-color: rgb(238, 123, 69); color: black; font-weight: 400; margin-block:0">Applications closed! Stay tuned - we'll need dedicated members next semester!</h1>
 		<!-- header -->
 		<header>
-			<div class="columnsformat">
-				<img class="headerimg" style="width: 22.5%; margin-inline: 10px;" alt="logo" src="SSFElogonobg.png">
-
-				<div class="hamburger" id="hamburger">☰</div>
-
-				<nav class="navmenu" id="navmenu">
-					<a class="navlink" href="index.html">Home</a>
-					<a class="navlink" href="SSFEabout.html">About Us</a>
-					<a class="navlink" href="SSFEprocess.html">Our Process</a>
-					<a class="navlink" href="SSFEsubteams.html">Subteams</a>
-
-					<a class="navlink" href="SSFEprojects.html">Projects ⌄</a>
-						<div class="drpdwnc">
-							<a class="drpnavlink" href="SSFEdesign1.html">Design 1</a>
-							<a class="drpnavlink" href="SSFEdesign2.html">Design 2</a>
-					  	</div>
-
-
-					<a class="navlink" href="SSFEcalendar.html">Calendar</a>
-					<a class="navlink" href="SSFEapply.html">Apply</a>
-					<a class="navlink" href="SSFEdonate.html">Donate</a>
-					<a class="navlink" href="SSFEcontact.html">Contact Us</a>
-				</nav>
-			</div>
+			<div class="topnav" id="myTopnav">
+				<a href="index.html"><img id="navbarlogo" src="SSFElogonobg.png"></a>
+				<div id="right">
+					<a href="index.html" class="active">Home</a>
+					<a href="SSFEabout.html">About Us</a>
+					<a href="SSFEprocess.html">Our Process</a>
+					<a href="SSFEsubteams.html">Subteams</a>
+					<div class="dropdown">
+					<a href="SSFEprojects.html" class="dropbtn">Projects<i class="fa fa-caret-down"></i></a>
+					<div class="dropdown-content">
+						<a href="SSFEdesign1.html">Design 1</a>
+						<a href="SSFEdesign2.html">Design 2</a>
+					</div>
+					</div>
+					<a href="SSFEcalendar.html">Calendar</a>
+					<a href="SSFEapply.html">Apply</a>
+					<a href="SSFEdonate.html">Donate</a>
+					<a href="SSFEcontact.html">Contact</a>
+				</div>
+				<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+				</div>
 
 		</header>
 
@@ -81,7 +79,9 @@
 </div>
 
 		<!-- footer -->
-		<footer class="footernav transitioning">
+	<center>
+		<footer class="transitioning">
+			<div id='sizing'>
 			<div class="columnsformat">
 				<a class="navlink" target="_blank" href="https://www.instagram.com/tamu_ssfe/">
 					Instagram <img src="insta.png" alt="" class="navlinkimg"></a>
@@ -91,12 +91,14 @@
 					Email Us <img src="email.png" alt="" class="navlinkimg"></a>
 				<img src="SSFEcircle.png" alt="" class="footerlogo" style="border-radius: 50%;">
 				<div class="rowsformat">
-					<p style="font-size: 1vw; color: #EBEBEB;">©2025 Society of Sonic Flight Engineers</p>
-					<p style="font-size: 1vw; color: #EBEBEB; margin-block: 0.2vw;">H. R. Bright Building (HRBB)</p>
-					<p style="font-size: 1vw; color: #EBEBEB; margin-block: 0.2vw;">710 Ross St, College Station, TX 77840</p>
+					<p style="font-size: 15px; color: #EBEBEB; margin-block: 0.2vw;">H. R. Bright Building (HRBB)</p>
+					<p style="font-size: 15px; color: #EBEBEB; margin-block: 0.2vw;">710 Ross St, College Station, TX 77840</p>
+					<p style="font-size: 15px; color: #EBEBEB; margin-bottom: 0; margin-top: 2vw;">©2025 Society of Sonic Flight Engineers</p>
 				</div>
 			</div>
+			</div>
 		</footer>
+	</center>
 
 	</body>
 
