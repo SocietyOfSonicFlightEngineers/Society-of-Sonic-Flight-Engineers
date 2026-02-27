@@ -43,9 +43,36 @@
 
 
 		<div class="bodydiv transitioning">
-			<h1 style="display: flex; align-items: center; justify-content:center; font-size: 50px; color: rgb(238, 123, 69); background-image: url('HomeBG.png'); margin: 0; width: 98vw; position: relative; padding: auto; min-height: 500px;   background-size: cover; left: 50%; transform: translateX(-50%);
-  					background-position: center;
-  					background-repeat: no-repeat; border-bottom: 4px solid rgb(238, 123, 69);"><b>High Speed Flight.<br>Fast Paced Engineering.</b></h1>
+			<h1 style="
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    font-size: 50px; 
+    color: rgb(238, 123, 69); 
+    margin: 0; 
+    width: 98vw; 
+    position: relative; 
+    min-height: 500px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    border-bottom: 4px solid rgb(238, 123, 69);
+    overflow: hidden; /* Keeps the background inside the border */
+">
+    <div style="
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background-image: 
+        linear-gradient(rgba(238, 123, 69, 0.3), rgba(238, 123, 69, 0.3)), 
+        url('bannerphoto.png');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.6; /* ADJUST THIS: 1.0 is full, 0.5 is half transparent */
+        z-index: -1; /* Puts it behind the text */
+    "></div>
+	<span style="-webkit-text-stroke: 2px black;">High Speed Flight.<br>Fast Paced Engineering.</span>
+    
+</h1>
   			<br>
 			<div class="rowsformat">
 					<div class="columnsformat">
