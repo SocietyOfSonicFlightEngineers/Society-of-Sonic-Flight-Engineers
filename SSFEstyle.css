@@ -278,6 +278,16 @@
     justify-content: center;
 }
 
+/* Add this to your CSS file */
+.pcontainer p {
+    word-wrap: break-word;      /* Forces long words/URLs to break onto a new line */
+    overflow-wrap: break-word;  /* Modern standard for word breaking */
+    max-width: 100%;            /* Restricts text to the width of the screen */
+    box-sizing: border-box;     /* Ensures padding doesn't push the width out */
+    padding-left: 10px;         /* Adds slight spacing from the edge */
+    padding-right: 10px;
+}
+
 .columnsformat {
     display: flex;
     flex-direction: row;
@@ -555,7 +565,7 @@
 }
 
 /* Mobile View Styles */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1170px) {
   /* Hide all navigation links except the hamburger icon */
   .topnav a:not(:first-child), .topnav #right {
     display: none;
@@ -763,304 +773,6 @@
     border: 0.2vw solid rgb(0, 0, 0);
 }
 
-/*Navigation Buttons Stuff*/
-    @media (max-width: 900px) {
-        .navmenu {
-            flex-wrap: wrap;
-        }
-        #aboutgroupphoto{
-            max-width: 80%;
-        }
-    }
-    .dropdown{
-        position: relative;
-        display: inline block;
-        color: #EBEBEB;
-        font-size: 20px;
-        font-weight: 500;
-        background-color: #051e28;
-        padding: 10px;
-        transition: all 0.15s;
-        text-decoration: none;
-        z-index: 2;
-        align-items: center;
-        white-space: nowrap;
-    }
-    .navlink {
-        display: inline-block;
-        max-width: 90%;
-        color: #EBEBEB;
-        font-size: 20px;
-        font-weight: 500;
-        background-color: #051e28;
-        padding: 10px;
-        border:2px solid rgb(238, 123, 69);
-        transition: all 0.15s;
-        text-decoration: none;
-        z-index: 2;
-        align-items: center;
-        white-space: nowrap;
-        border-radius: 8px;
-    }
-
-    .navlink:hover {
-        z-index: 4;
-        background: rgb(238, 123, 69);
-        color: #051e28;
-        transition: all 0.15s;
-        transform: scale(1.1);
-
-    }
-
-    .navlinkimg {
-        display: inline-block;
-        height: 25px;
-        vertical-align: middle;
-    }
-
-    .drpnavlink {
-        display: inline-block;
-        color: #EBEBEB;
-        font-size: 20px;
-        font-weight: 500;
-        background-color: #051e28;
-        padding: 10px;
-        border:2px solid rgb(238, 123, 69);
-        transition: all 0.15s;
-        margin-inline: -2.5px;
-        margin-block: -1px;
-        text-decoration: none;
-        transition: all 0.15s;
-    }
-
-    .drpnavlink:hover {
-        background: rgb(238, 123, 69);
-        color: #051e28;
-        transition: all 0.15s;
-    }
-    
-.pcontainer {
-    padding-inline: none;
-    padding-block: none
-    background-color: none;
-    box-shadow: none;
-    margin-bottom: 0vw;
-    justify-content: center;
-}
-
-.columnsformat {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.rowsformat {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/*.header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), #345A66), url(IMG_3074.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top 10px;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-    background-color: #345A66;
-    position: sticky;
-    top: -0px;
-}*/
-
-.navmenu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-block: 25px;
-    margin-right: auto;
-    background-color: none;
-    box-shadow: none;
-    z-index: 1;
-}
-
-.navmenu > * {
-  position: relative;
-  display: flex;
-}
-
-.bodydiv {
-    background-color: #051e28;
-    text-align: center;
-    font-weight: 500;
-    margin: auto;
-    width: 80%;
-}
-
-.drpdwn {
-    position: relative;
-    display: flex-block;
-    z-index: 3;
-}
-
-
-
-.tricolorcolumns {
-    color: black;
-}
-
-.drpdwnc {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    opacity: 0%;
-    transition: all 0.15s;
-    top: 100%;
-}
-
-.drpdwnfaq {
-    position: relative;
-    display: block;
-    width: 60%;
-    margin: auto;
-    z-index: 1;
-    transition: all 0.15s;
-}
-
-.drpdwnt {
-    opacity: 0%;
-    display: block;
-    z-index: 1;
-    transition: all 0.15s;
-    max-height: 0vw;
-}
-
-.drpdwn:hover .drpdwnc {transition: all 0.15s; display: block; opacity: 100%}
-
-.drpdwnfaq.open .drpdwnt {
-  opacity: 1;
-  display: inline;
-  transition: all 0.15s;
-}
-
-.drpdwnfaq.open h3 {
-  transition: all 0.15s;
-  background-color: rgba(155, 185, 255, 1.0);
-  margin-bottom: 1vw;
-}
-
-.transitioning {
-    animation: fadein 0.5s forwards;
-}
-
-.timeline {
-    width:80%;
-    max-width: 800px;
-    height:auto;
-    margin: 0 auto;
-    display: grid;
-}
-
-.timeline ul{
-    padding: 0;
-    list-style:none;
-    margin-bottom: 0;
-}
-
-.timeline ul li{
-    background-color: rgb(238, 123, 69);
-    border-radius: 2vw;
-    margin-bottom: 2vw;
-    padding-bottom: 1.5vw;
-    width: 52%;
-    box-shadow: 0.25vw 0.5vw 0.5vw rgba(0, 0, 0, 0.4);
-}
-
-#projecttext{
-    color: black;
-}
-
-.timeline ul li:nth-child(odd){
-    float: left;
-}
-
-.timeline ul li:nth-child(even) {
-    float: right;
-}
-
-.timeline ul li:last-child {
-    margin-bottom: 0;
-}
-
-.timeline-content p{
-    margin-block: 0;
-}
-
-.timeline-date {
-}
-.timeline-middle {
-    position: relative;
-    color: black;
-}
-
-.headercontainers {
-    display: inline-flex;
-}
-
-@keyframes fadein {
-    from{
-        transform: translateY(200px); opacity: 15%;
-    }
-
-    to{
-        transform: translateY(0vh); opacity: 100%;
-    }
-}
-
-/* Hamburger toggle thing */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    color: #EBEBEB;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 28px;
-    line-height: 1;
-}
-
-/* Supposed to mobile condense lol */
-@media (max-width: 1050px) {
-
-    #headerdiv { flex-wrap: wrap;}
-
-    .hamburger {
-        display: block;
-        order: 1; margin-left: auto;
-    }
-
-    .navmenu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        order: 2;
-    }
-
-    .navmenu.active {
-        display: flex;
-    }
-
-    .navlink {
-        text-align: center;
-    }
-
-    .columnsformat:not(#headerdiv) { flex-direction: column; align-items: flex-start; }
-
-
-    .headerimg { order: 0; }
-}
-
 /*navbar shenanigans*/
 #navbarlogo{
     display: flex;
@@ -1181,7 +893,7 @@
 
 /* Mobile View Styles */
 /* --- CLEANED MOBILE VIEW (MAX 1024px) --- */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
     .topnav a:not(:first-child), 
     .topnav #right {
         display: none;
@@ -1229,11 +941,40 @@
         width: 200px;
         margin: 0 auto !important;
     }
+    .bodydiv {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* 2. Force the step boxes to stack and be full width */
+    .columnsformat {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 95% !important; /* Slightly less than 100% to allow for padding */
+        margin: 0 auto 20px auto !important; /* Centers the box */
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Force images to shrink inside the boxes */
+    .headerimg {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 300px !important; /* Maximum size on mobile */
+        min-width: 0 !important;
+        margin: 10px auto !important;
+    }
+
+    /* 4. Force text to wrap */
+    .rowsformat {
+        width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
 }
 
 /* --- DESKTOP SAFETY NET (MIN 1025px) --- */
 /* This ensures the icon is 100% hidden on screens wider than mobile */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1180px) {
     .topnav a.icon, 
     .icon {
         display: none !important;
