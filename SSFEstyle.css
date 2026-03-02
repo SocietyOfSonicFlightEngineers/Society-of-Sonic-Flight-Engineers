@@ -1,5 +1,5 @@
  @font-face {font-family: 'Futura';
-            src: url('/fonts/Futura Condensed.ttf') format('truetype');
+            src: url('/Fonts/Futura Condensed.ttf') format('truetype');
             font-weight: normal;
             font-style: condensed;}
 
@@ -271,7 +271,7 @@
     
 .pcontainer {
     padding-inline: none;
-    padding-block: none
+    padding-block: none;
     background-color: none;
     box-shadow: none;
     margin-bottom: 0vw;
@@ -615,10 +615,6 @@
     display: block;
     color: rgb(238, 123, 69);
   }
-   @font-face {font-family: 'Futura';
-            src: url('fonts/Futura Condensed.ttf') format('truetype');
-            font-weight: normal;
-            font-style: condensed;}
 
  /* built in elements*/
     body {
