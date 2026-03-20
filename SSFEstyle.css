@@ -281,6 +281,65 @@
     justify-content: center;
 }
 
+.step-card {
+            border-radius: 25px; /* Rounded corners */
+            padding: 40px; /* Space around the inner content */
+            width: 90%;
+            
+            /* FLEXBOX PROPERTIES */
+            display: flex; /* Enacts flexbox */
+            flex-direction: row; /* Horizontal alignment (Left to Right) */
+            align-items: center; /* Vertically centers both the image and the text */
+            gap: 40px; /* Creates the space between the image and the text */
+        }
+
+        /* Styles for the image container */
+        .image-container {
+            flex: 1; /* Allows this side to take up proportional space */
+            display: flex;
+            justify-content: center; /* Centers the image within its flex area */
+        }
+
+        .step-image {
+            max-width: 100%; /* Ensures the image shrinks on smaller screens */
+            height: auto; /* Maintains aspect ratio */
+            display: block;
+            border-radius: 25px; /* Slight rounding on image corners */
+        }
+
+        /* Styles for the text container */
+        .text-container {
+            flex: 1; /* Allows this side to take up proportional space */
+            color: black; /* White text color */
+        }
+
+        .step-header {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-top: 0; /* Removes default top margin */
+        }
+
+        .step-description {
+            font-size: 16px;
+            line-height: 1.5; /* Good readability */
+            margin-bottom: 0; /* Removes default bottom margin */
+            color: black;
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media screen and (max-width: 768px) {
+            .step-card {
+                flex-direction: column; /* Stacks image on top of text on mobile */
+                text-align: center; /* Centers text for mobile */
+                padding: 20px;
+                gap: 20px;
+            }
+            .step-header {
+                font-size: 20px;
+            }
+        }
+
 /* Add this to your CSS file */
 .pcontainer p {
     word-wrap: break-word;      /* Forces long words/URLs to break onto a new line */
