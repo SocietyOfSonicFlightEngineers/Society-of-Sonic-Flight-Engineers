@@ -53,6 +53,15 @@
         vertical-align: middle;
     }
 
+    /* This targets any link inside the #projecttext paragraph */
+#projecttext a {
+    font-family: inherit !important;
+    font-size: inherit !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    color: black;
+}
+
     iframe {
         display: block;
         margin: auto;
