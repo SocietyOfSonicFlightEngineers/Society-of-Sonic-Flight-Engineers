@@ -280,7 +280,33 @@
         color: #051e28;
         transition: all 0.15s;
     }
-    
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* DELETE the flex-start line below this one */
+    align-items: center; 
+    gap: 20px;
+    width: 100%;
+}
+
+.container div {
+    flex: 1 1 400px;
+    max-width: 500px;
+    /* Optional: Ensure the internal div also centers its content */
+    display: flex;
+    align-items: center; 
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: white;
+}
+
+
 .pcontainer {
     padding-inline: none;
     padding-block: none;
