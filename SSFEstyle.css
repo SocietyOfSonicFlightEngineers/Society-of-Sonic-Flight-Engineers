@@ -285,26 +285,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* DELETE the flex-start line below this one */
     align-items: center; 
     gap: 20px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .container div {
-    flex: 1 1 400px;
-    max-width: 500px;
-    /* Optional: Ensure the internal div also centers its content */
-    display: flex;
-    align-items: center; 
+    /* Lower the basis to 300px to give them more room to stay side-by-side */
+    flex: 1 1 300px; 
+    /* Hard cap the width of the individual image boxes */
+    max-width: 500px; 
 }
 
 .container img {
+    /* Forces the image to NEVER exceed the 500px box width */
     width: 100%;
+    max-width: 100%; 
     height: auto;
     display: block;
     background-color: white;
 }
+
 
 
 .pcontainer {
